@@ -1,0 +1,23 @@
+<!-- //-------------------------------- getting nth largest number by 2 loops of an UNSORTED list (selection SOrt till nth number)-->
+
+<script>
+  function NthlargestNumber(arr, nth) {
+  //  var fourthMax = count = 0; var max = 0;
+    for (var a = 0; a < arr.length; a++) {
+      for (var b = a + 1; b <= arr.length - 1; b++) {
+        if (arr[a] < arr[b])// && count < nth + 1) {
+        {
+          t = arr[b];
+          arr[b] = arr[a];
+          arr[a] = t;
+        }
+      }
+      if (a == nth)
+        break;
+    }
+    console.log(arr)
+    return arr[nth - 1];
+  }
+  var arr = [1, 6, 21, 7, 99, 12, 11, 2];
+  console.log(NthlargestNumber(arr, 4)); 
+</script>
