@@ -12,7 +12,7 @@
           arr[a] = t;
         }
       }
-      if (a == nth)
+      if (a == nth) // this line decide the Nth number, else are selection sort
         break;
     }
     console.log(arr)
